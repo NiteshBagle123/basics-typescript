@@ -1,10 +1,10 @@
-let userInput: unknown;
-let userName: string;
+// never type
 
-userInput = 1,
-userInput = '1';
-userInput = undefined;
-userInput = NaN;
-userInput = null;
+function generateError(message: string, code: number) {
+    throw {
+        code,
+        message
+    }
+}
 
-userName = userInput;
+const error = generateError('Internal Server Error', 500);
